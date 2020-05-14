@@ -1,0 +1,42 @@
+{% load static %}
+ <!doctype html>
+  <html>
+      <head>
+         <meta charset="utf-8">
+         
+         <link rel="stylesheet"  href= " {% static 'css/styles.css' %} " type="text/css" /> 
+         
+         
+         <title>Playground</title>
+     </head>
+ 
+    <body>
+
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1>I am John Doe</h1>
+              <p>And I'm a Photographer</p>
+              <button>Hire me</button>
+            </div>
+          </div>
+
+          
+    <div id="outter_container">
+        <div id = "post">
+
+            {% for each_post in post %}
+            <div>
+
+                <img src = "{{ each_post.post_Img.url}}">
+                <p>{{ each_post.title }}</p>
+                <p>{{ each_post.body }}</p>
+                
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+          <h1>{{ title }}</h1>
+         <p>{{ cal }}</p>
+     </body>
+ </html>
