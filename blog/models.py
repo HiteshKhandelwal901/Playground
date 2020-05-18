@@ -36,4 +36,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class test_form_model(models.Model):
+    first_name = models.CharField(max_length = 200)
+    last_name = models.CharField(max_length = 300)
 
